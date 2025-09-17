@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './Quran.css';
 
 function Quran() {
   const [surah, setSurah] = useState(1);
@@ -12,22 +13,28 @@ function Quran() {
   }, [surah]);
 
   return (
-    <div>
-      <h2>Al-Qur'an</h2>
-      <input
-        type="number"
-        value={surah}
-        onChange={e => setSurah(e.target.value)}
-        min="1"
-        max="114"
-      />
+    <div className="quran-container">
+      <h2>Baca Al-Qur'an</h2>
+      <div className="surah-selector">
+        <input
+          type="number"
+          value={surah}
+          onChange={e => setSurah(e.target.value)}
+          min="1"
+          max="114"
+          placeholder="Nomor Surah"
+        />
+        <button>Cari</button>
+      </div>
       {data && (
-        <div>
+        <div className="surah-content">
           <h3>{data.name.transliteration.en} ({data.number})</h3>
           {data.ayahs.map(ayah => (
-            <div key={ayah.number}>
-              <p>{ayah.text} ({ayah.numberInSurah})</p>
-              <p>{ayah.translation?.en || 'Translation not available'}</p>
+            <div key={ayah.number} className="ayah-card">
+              <p className="ayah-text">{ayah.text}</p>
+              <p className="ayah-transliteration">{ayah.transliteration?.en}</p>
+              <p className="ayah-translation">{ayah.translation?.en || 'Terjemahan tidak tersedia'}</p>
+              <button className="tafsir-button">Lihat Tafsir</button>
             </div>
           ))}
         </div>
