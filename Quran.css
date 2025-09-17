@@ -1,0 +1,50 @@
+.quran-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.surah-selector {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.surah-selector input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.surah-selector button {
+  background-color: #1B5E20;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+.ayah-card {
+  background: #f5f5f5;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.ayah-text {
+  font-family: 'Uthmanic Script', serif;
+  font-size: 24px;
+  text-align: right;
+  color: #1B5E20;
+}
+.ayah-translation {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+.tafsir-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
