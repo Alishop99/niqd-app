@@ -3,7 +3,7 @@ from pathlib import Path
 # Isi README.md
 readme_content = """# 🌙 Nurul Iman Qur'an Digital (NIQD)
 
-**Nurul Iman Qur’an Digital (NIQD)** adalah aplikasi web untuk memfasilitasi pembelajaran Al-Qur’an dan kajian Islam, khususnya bagi mahasiswa STAI Nurul Iman.  
+**Nurul Iman Qur’an Digital (NIQD)** adalah aplikasi web untuk memfasilitasi pembelajaran Al-Qur’an dan kajian Islam, khususnya bagi mahasiswa.  
 
 Kontribusi dipersilakan! Silakan baca **CONTRIBUTING.md** untuk panduan kontribusi.  
 
