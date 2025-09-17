@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './Prophets.css';
 
 function Prophets() {
   const [prophets, setProphets] = useState([]);
@@ -11,16 +12,19 @@ function Prophets() {
   }, []);
 
   return (
-    <div>
+    <div className="prophets-container">
       <h2>Kisah 25 Nabi</h2>
-      {prophets.map(prophet => (
-        <div key={prophet.id}>
-          <h3>{prophet.prophet_name}</h3>
-          <p>{prophet.story_text}</p>
-          <p><strong>Ayat Terkait:</strong> {prophet.related_verses}</p>
-          <p><strong>Nilai Moral:</strong> {prophet.moral_values}</p>
-        </div>
-      ))}
+      <div className="prophet-list">
+        {prophets.map(prophet => (
+          <div key={prophet.id} className="prophet-card">
+            <h3>{prophet.prophet_name}</h3>
+            <p>{prophet.story_text.substring(0, 200)}...</p>
+            <p><strong>Ayat Terkait:</strong> {prophet.related_verses}</p>
+            <p><strong>Nilai Moral:</strong> {prophet.moral_values}</p>
+            <button className="favorite-button">Tambah ke Favorit</button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
