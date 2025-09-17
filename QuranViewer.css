@@ -11,41 +11,23 @@
   margin-bottom: 20px;
 }
 
-.surah-selector input {
+.surah-selector select {
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  width: 100px;
+  width: 200px;
 }
 
-.surah-selector button {
-  padding: 10px 20px;
-  background-color: #1B5E20;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.surah-selector button:hover {
-  background-color: #2E7D32;
-}
-
-.quran-content h3 {
-  color: #1B5E20;
+.quran-content .ayah-container {
   margin-bottom: 15px;
-}
-
-.ayah-card {
+  padding: 10px;
   background: #f5f5f5;
-  padding: 15px;
-  margin-bottom: 10px;
-  border-radius: 8px;
+  border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.ayah-text {
+.ayah-arabic {
   font-family: 'Uthmanic Script', serif;
   font-size: 24px;
   text-align: right;
@@ -53,13 +35,18 @@
   margin-bottom: 10px;
 }
 
-.ayah-transliteration, .ayah-translation {
+.ayah-translation {
   font-size: 16px;
   color: #333;
-  margin: 5px 0;
+  margin: 0;
 }
 
 .error {
   color: #d32f2f;
   text-align: center;
+}
+
+@font-face {
+  font-family: 'Uthmanic Script';
+  src: url('/fonts/UthmanicHafs1Ver10.otf') format('opentype');
 }
