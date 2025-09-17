@@ -1,0 +1,49 @@
+.tafsir-viewer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.tafsir-selector {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tafsir-selector input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100px;
+}
+
+.tafsir-selector button {
+  padding: 10px 20px;
+  background-color: #1B5E20;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tafsir-selector button:hover {
+  background-color: #2E7D32;
+}
+
+.tafsir-content h3 {
+  color: #1B5E20;
+  margin-bottom: 15px;
+}
+
+.tafsir-content p {
+  font-size: 16px;
+  color: #333;
+  margin: 5px 0;
+}
+
+.error {
+  color: #d32f2f;
+  text-align: center;
+}
