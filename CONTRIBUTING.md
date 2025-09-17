@@ -7,7 +7,7 @@ Terima kasih sudah tertarik untuk berkontribusi pada proyek **NIQD**!
 1. **Fork repository ini** ke akun GitHub Anda.
 2. **Clone hasil fork** ke komputer lokal:
    ```bash
-   git clone https://github.com/alishop99/niqd.git
+   git clone https://github.com/alishop99/niqd-app.git
    ```
 3. **Buat branch baru** untuk fitur atau perbaikan Anda:
    ```bash
