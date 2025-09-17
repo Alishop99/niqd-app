@@ -136,3 +136,10 @@ Sistem annotasi / catatan pengajar
 Multi-language UI
 
 PWA untuk akses offline
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+
+## Patent Notice
+Certain features may be covered by one or more patents. See [PATENTS](./PATENTS) for more information.
+
