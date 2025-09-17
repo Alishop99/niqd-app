@@ -1,145 +1,144 @@
-# Nurul Iman Qur'an Digital (NIQD)
-Nurul Iman Qur’an Digital (NIQD) adalah aplikasi web yang dikembangkan untuk memfasilitasi pembelajaran Al-Qur’an dan kajian Islam, khususnya untuk mahasiswa STAI Nurul Iman.   Kontribusi dipersilakan! Silakan baca CONTRIBUTING.md untuk panduan kontribusi.
+# ðŸŒ™ Nurul Iman Qur'an Digital (NIQD)
 
-**Repository**: `niqd-app`
+**Nurul Iman Qurâ€™an Digital (NIQD)** adalah aplikasi web untuk memfasilitasi pembelajaran Al-Qurâ€™an dan kajian Islam, khususnya bagi mahasiswa STAI Nurul Iman.  
 
-Aplikasi pendidikan Al-Qur'an yang berisi teks Al-Qur'an, tafsir tematik, dan cerita 25 nabi — dirancang untuk kebutuhan pengajaran.
+Kontribusi dipersilakan! Silakan baca **CONTRIBUTING.md** untuk panduan kontribusi.  
+
+**Repository**: `niqd-app`  
+**Deskripsi**: Aplikasi pendidikan Al-Qur'an berisi teks Al-Qur'an, tafsir tematik, dan cerita 25 nabi â€” dirancang untuk kebutuhan pengajaran.  
 
 ---
 
-## 🛠️ Tech Stack
+## ðŸ› ï¸ Tech Stack
 - **Frontend**: React.js (HTML, CSS, JavaScript)
 - **Backend**: Node.js (Express)
 - **Database**: MySQL
 
 ---
 
-## 📂 Struktur proyek
+## ðŸ“‚ Struktur Proyek
 
+```
 niqd-app/
-├── client/ # Frontend (React.js)
-│ ├── public/
-│ ├── src/
-│ │ ├── components/
-│ │ ├── pages/
-│ │ ├── App.js
-│ │ ├── index.js
-│ └── package.json
-├── server/ # Backend (Node.js)
-│ ├── routes/
-│ ├── models/
-│ ├── config/
-│ ├── server.js
-│ └── package.json
-├── database/ # Skema SQL
-│ └── schema.sql
-└── README.md
-
-
----
-
-## ✨ Fitur Utama
-- Menampilkan teks Al-Qur'an per ayat dan per surah
-- Pencarian ayat berdasarkan teks atau nomor
-- Tafsir tematik (kategori/topik)
-- Daftar dan cerita 25 nabi (ringkasan dan teks)
-- Autentikasi dasar untuk pengajar (opsional)
-- API RESTful untuk frontend
-- Endpoint untuk impor data (bulk insert Al-Qur'an, tafsir, cerita)
+â”œâ”€â”€ client/                  # Frontend (React.js)
+â”‚   â”œâ”€â”€ public/
+â”‚   â”œâ”€â”€ src/
+â”‚   â”‚   â”œâ”€â”€ components/
+â”‚   â”‚   â”œâ”€â”€ pages/
+â”‚   â”‚   â”œâ”€â”€ App.js
+â”‚   â”‚   â”œâ”€â”€ index.js
+â”‚   â””â”€â”€ package.json
+â”œâ”€â”€ server/                  # Backend (Node.js)
+â”‚   â”œâ”€â”€ routes/
+â”‚   â”œâ”€â”€ models/
+â”‚   â”œâ”€â”€ config/
+â”‚   â”œâ”€â”€ server.js
+â”‚   â””â”€â”€ package.json
+â”œâ”€â”€ database/                # Skema SQL
+â”‚   â””â”€â”€ schema.sql
+â””â”€â”€ README.md
+```
 
 ---
 
-## 🚀 Persiapan lingkungan (lokal)
+## âœ¨ Fitur Utama
+- ðŸ“– Menampilkan teks Al-Qur'an per ayat & per surah  
+- ðŸ” Pencarian ayat berdasarkan teks atau nomor  
+- ðŸ“š Tafsir tematik (kategori/topik)  
+- ðŸ‘³â€â™‚ï¸ Cerita 25 nabi (ringkasan dan teks)  
+- ðŸ”‘ Autentikasi dasar untuk pengajar (opsional)  
+- ðŸŒ API RESTful untuk frontend  
+- ðŸ“¥ Endpoint untuk impor data (bulk insert Al-Qur'an, tafsir, cerita)  
 
-1. Clone repo
+---
+
+## ðŸš€ Persiapan Lingkungan (Lokal)
+
+### 1. Clone Repository
 ```bash
 git clone https://github.com/Alishop99/niqd-app.git
 cd niqd-app
+```
 
-Setup database MySQL
+### 2. Setup Database MySQL
+- Buat database: `niqd_db`  
+- Import skema SQL dari `database/schema.sql`  
 
-Buat database: niqd_db
-
-Jalankan skema SQL di database/schema.sql
-
-Server (backend)
-
+### 3. Setup Server (Backend)
+```bash
 cd server
 cp .env.example .env   # isi dengan credential MySQL dan PORT
 npm install
-npm run dev   # atau `node server.js`
+npm run dev   # atau node server.js
+```
 
-
-Client (frontend)
-
+### 4. Setup Client (Frontend)
+```bash
 cd client
 npm install
 npm start
+```
 
+ðŸ‘‰ Secara default frontend akan request ke: **http://localhost:5000**  
 
-Aplikasi frontend default akan request ke http://localhost:5000.
+---
 
-⚙️ Contoh Environment Variables (server/.env)
+## âš™ï¸ Contoh Environment Variables (`server/.env`)
+```env
 PORT=5000
 DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=your_password
 DB_NAME=niqd_db
 JWT_SECRET=ubah_ke_rahasia
+```
 
-🗄️ Skema Database
+---
 
-Tersedia di database/schema.sql
+## ðŸ—„ï¸ Skema Database
+Skema tersedia di:  
+```
+database/schema.sql
+```
 
-📡 Desain API (usulan)
+---
 
-Autentikasi
+## ðŸ“¡ Desain API (Usulan)
 
-POST /api/auth/login → login, kembalikan JWT
+### Autentikasi
+- `POST /api/auth/login` â†’ login, kembalikan JWT  
+- `POST /api/auth/register` â†’ register (opsional)  
 
-POST /api/auth/register → register (opsional)
+### Surah & Ayat
+- `GET /api/surah` â†’ daftar surah  
+- `GET /api/surah/:id` â†’ detail surah  
+- `GET /api/ayat/:surahId/:ayatNumber` â†’ ambil 1 ayat  
+- `GET /api/ayat/search?q=...` â†’ pencarian teks  
 
-Surah & Ayat
+### Tafsir
+- `GET /api/tafsir` â†’ daftar tafsir tematik  
+- `GET /api/tafsir/:id` â†’ detail tafsir  
 
-GET /api/surah → daftar surah
+### Cerita Nabi
+- `GET /api/nabi` â†’ daftar cerita nabi  
+- `GET /api/nabi/:id` â†’ detail cerita  
 
-GET /api/surah/:id → detail surah
+### Admin / Import
+- `POST /api/import/quran` â†’ bulk insert Al-Qur'an (admin)  
 
-GET /api/ayat/:surahId/:ayatNumber → ambil 1 ayat
+---
 
-GET /api/ayat/search?q=... → pencarian teks
+## ðŸ›¤ï¸ Roadmap
+- [ ] Import data teks Al-Qur'an resmi  
+- [ ] Tambahkan audio tilawah  
+- [ ] Sistem annotasi / catatan pengajar  
+- [ ] Multi-language UI  
+- [ ] PWA untuk akses offline  
 
-Tafsir
+---
 
-GET /api/tafsir → daftar tafsir tematik
+## ðŸ“œ License
+This project is licensed under the **MIT License** â€” lihat [LICENSE](./LICENSE) untuk detail.  
 
-GET /api/tafsir/:id → detail tafsir
-
-Cerita Nabi
-
-GET /api/nabi → daftar cerita nabi
-
-GET /api/nabi/:id → detail cerita
-
-Admin / Import
-
-POST /api/import/quran → bulk insert Al-Qur'an (admin)
-
-🛤️ Roadmap
-
-Import data teks Al-Qur'an resmi
-
-Tambahkan audio tilawah
-
-Sistem annotasi / catatan pengajar
-
-Multi-language UI
-
-PWA untuk akses offline
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
-
-## Patent Notice
-Certain features may be covered by one or more patents. See [PATENTS](./PATENTS) for more information.
-
+## ðŸ“‘ Patent Notice
+Beberapa fitur mungkin dilindungi oleh satu atau lebih paten. Lihat [PATENTS](./PATENTS) untuk informasi lebih lanjut.  
