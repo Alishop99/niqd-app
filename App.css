@@ -1,1 +1,33 @@
-
+.home-container {
+  background: url('/images/islamic-bg.jpg') no-repeat center;
+  background-size: cover;
+  padding: 50px;
+  text-align: center;
+  color: #fff;
+}
+.quick-access {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+.quick-access button {
+  background-color: #1B5E20;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+}
+.quick-access button:hover {
+  background-color: #2E7D32;
+}
+.feature-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 200px;
+  margin: 10px;
+}
