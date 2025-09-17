@@ -1,1 +1,33 @@
-
+.prophets-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.prophet-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.prophet-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.prophet-card h3 {
+  color: #1B5E20;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.favorite-button {
+  background-color: #1B5E20;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+.favorite-button:hover {
+  background-color: #2E7D32;
+}
